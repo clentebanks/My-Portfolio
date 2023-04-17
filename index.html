@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">CLENT</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="">
+            </div>
+            <h1>CLENT EBANKS</h1>
+            <h2>WEB DEVELOPER</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/clent.ebanks" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/clentebanks" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="skype:clentebanks0?chat" target="_blank"><i class="fa-brands fa-skype"></i></a>
+                <a href="https://www.linkedin.com/in/clent-ebanks0-95bb78178/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:clentebanks0@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!--<a href="#"><i class="fa-solid fa-rss"></i></a>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>¡Hola! Soy Clent,</span> un apasionado de web development y la programación. Me encanta trabajar en proyectos de desarrollo web y disfruto mucho la programación. Siempre estoy buscando nuevas tecnologías y herramientas para mejorar mis habilidades y crear soluciones innovadoras. Estoy emocionado por la oportunidad de trabajar en proyectos desafiantes que me permitan seguir creciendo y aprendiendo como desarrollador.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            18-05-1979
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            504-98520210
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            clentebanks0@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            https://www.everesthn.ga
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Col. El Higo, Siguatepeque, Comayagua, Honduras
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-windows"></i>
+                            <span>WINDOWS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button>
+              <a href="/CV.pdf" target="_blank" style="text-decoration: none; color: #fff;">Descargar CV <i class="fa-solid fa-download"></i></a>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>HABILIDADES</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Shopify</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Wordpress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>ASP.NET</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Lider de Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Ingeniería en Computación </h4>
+                        <span class="casa">Universidad Tecnológico De Honduras</span>
+                        <span class="fecha">2021 - cursando</span>
+                        <p>La ingeniería en computación estudia el desarrollo de sistemas automatizados y el uso de los lenguajes de programación; de igual forma se enfoca al análisis, diseño y la utilización del hardware y software para lograr la implementación de las más avanzadas aplicaciones industriales, telemáticas y científicas.​</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Licenciado en Administración Militar Con orienta en Administración de Empresas</h4>
+                        <span class="casa">Universidad Autónoma de Honduras</span>
+                        <span class="fecha">2002 - 2005</span>
+                        <p>La Licenciatura en Administración Militar es la parte del estado que tiene como misión gestionar tanto los medios humanos como materiales, económicos y técnicos en que se sirven las fuerzas armadas garantizando así el cumplimiento adecuado de las funciones que les atribuye la constitución</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Subteniente de Infantería</h4>
+                        <span class="casa">Academia Militar de Honduras General Francisco Morazán </span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Son responsables de la disciplina, moral y bienestar del personal de su unidad</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Web Developer</h4>
+                        <span class="casa">Next Mile</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>El equipo de Data Intelligence ha creado Next Mile un servicio de sistematización, procesamiento y generación de gráficos y mapas interactivos para visualizar información. Sea que esta provenga de bases de una pequeña base de datos o de grandes y múltiples bases de datos.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Web Developer</h4>
+                        <span class="casa">Data Intelligence</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Generamos día a día información histórica, actual y proyectada disponible de forma gratuita y con suscripción.
+                            Nuestro norte es desarrollar productos digitales bajo la modalidad Datos como Servicio (Data As A Service) que respondan las preguntas que se puedan presentar en tu día a día.    
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Web Developer</h4>
+                        <span class="casa">Sistema de Información de Cambio Climático (SNICC)</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>El sistema fue desarrollado en el marco del proyecto de consolidación de la Estrategia REDD+ en coordinación con el Ministerio de Medio Ambiente y Recursos Naturales de Guatemala.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <form class="col" name="contact" method="POST" data-netlify="true" id="contact-us" onSubmit="submit" data-netlify-honeypot="bot-field" action="/gracias">
+                    <input  name="bot-field" style="display: none;">
+                    <!-- Left Inputs -->
+                    <div class="col-md-6 ">
+                        <!-- Name -->
+                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre" />
+                        <!-- Email -->
+                        <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                        <!-- Subject -->
+                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Asunto" />
+                       
+                    </div><!-- End Left Inputs -->
+                    <!-- Right Inputs -->
+                    <div class="col-md-6">
+                        <!-- Message -->
+                        <textarea name="message" id="message" cols="30" rows="10" class="form textarea"  placeholder="Mensaje"></textarea>
+                    </div><!-- End Right Inputs -->
+                    <!-- Bottom Submit -->
+                    <div class="relative fullwidth col-xs-12">
+                        <!-- Send Button -->
+                        <button type="submit" id="submit"  class="form-btn">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i> <span class="overlay"></span></button> 
+                    </div><!-- End Bottom Submit -->
+                    <!-- Clear -->
+                    <div class="clear"></div>
+                </form>
+                <!--<div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>-->
+                <!-- Mapa -->
+                <div class="col">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.77019555412556!2d-87.82723685482034!3d14.597651018904232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6595315ddda417%3A0x3e748230afe3353f!2sLa%20casa%20de%20las%20sopas!5e0!3m2!1ses!2shn!4v1681699662971!5m2!1ses!2shn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <!--<img src="img/ubicacion.png" alt="">--> 
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Siguatepeque, Comayagua Honduras
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: 504-98520210 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: clentebanks0@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/clent.ebanks" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/clentebanks" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="skype:clentebanks0?chat" target="_blank"><i class="fa-brands fa-skype"></i></a>
+            <a href="https://www.linkedin.com/in/clent-ebanks0-95bb78178/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:clentebanks0@gmail.com"><i class="fa fa-envelope"></i></a>
+            <!--<a href="#"><i class="fa-solid fa-rss"></i></a>-->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
