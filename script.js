@@ -1,41 +1,61 @@
-let menuVisible = false;
-//Función que oculta o muestra el menu
+const nav = document.getElementById('nav');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.site-nav a');
+
 function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
+  const isOpen = nav.classList.toggle('responsive');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
 }
 
 function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
+  nav.classList.remove('responsive');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
 }
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+
+navToggle.addEventListener('click', mostrarOcultarMenu);
+navLinks.forEach(link => link.addEventListener('click', seleccionar));
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.16 });
+
+document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      document.querySelectorAll('.skill-progress').forEach(bar => {
+        bar.style.width = bar.dataset.width || '0%';
+      });
+      skillObserver.disconnect();
+    }
+  });
+}, { threshold: 0.35 });
+
+const skillsSection = document.getElementById('skills');
+if(skillsSection){
+  skillObserver.observe(skillsSection);
 }
 
+const sections = document.querySelectorAll('main section[id]');
+const activeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
+  });
+}, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
+sections.forEach(section => activeObserver.observe(section));
