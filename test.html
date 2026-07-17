@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Executive resume of Clent Ebanks">
+  <title>Clent Ebanks | Executive Resume</title>
+
+  <style>
+    :root {
+      --navy: #0b2447;
+      --blue: #174b8a;
+      --accent: #27a66b;
+      --ink: #172033;
+      --muted: #5d6879;
+      --line: #dbe2ea;
+      --soft: #f4f7fa;
+      --paper: #ffffff;
+      --page-bg: #e9eef4;
+      --shadow: 0 20px 60px rgba(15, 35, 65, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(23, 75, 138, 0.14), transparent 34rem),
+        var(--page-bg);
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.48;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px;
+      background: rgba(11, 36, 71, 0.94);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .toolbar button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 10px;
+      color: #fff;
+      background: rgba(255,255,255,.09);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .toolbar button:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.5);
+    }
+
+    .toolbar .primary {
+      color: #07243b;
+      background: #ffffff;
+    }
+
+    .toolbar .primary:hover {
+      background: #edf6ff;
+    }
+
+    .resume {
+      width: min(210mm, calc(100% - 32px));
+      margin: 28px auto 50px;
+      padding: 18mm 17mm;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      border-top: 8px solid var(--navy);
+    }
+
+    .resume-header {
+      position: relative;
+      margin: -18mm -17mm 8mm;
+      padding: 15mm 17mm 10mm;
+      color: #fff;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(39,166,107,.24), transparent 45%),
+        linear-gradient(135deg, var(--navy), var(--blue));
+    }
+
+    .resume-header::after {
+      content: "";
+      position: absolute;
+      width: 185px;
+      height: 185px;
+      right: -55px;
+      top: -70px;
+      border: 22px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .identity {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .monogram {
+      display: grid;
+      flex: 0 0 62px;
+      width: 62px;
+      height: 62px;
+      place-items: center;
+      border: 2px solid rgba(255,255,255,.75);
+      border-radius: 16px;
+      background: rgba(255,255,255,.1);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 27pt;
+      line-height: 1;
+      letter-spacing: 1.6px;
+    }
+
+    .headline {
+      margin: 7px 0 0;
+      color: rgba(255,255,255,.88);
+      font-size: 10.5pt;
+      font-weight: 600;
+      letter-spacing: .25px;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      margin-top: 17px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.26);
+      color: rgba(255,255,255,.9);
+      font-size: 9.4pt;
+      overflow-wrap: anywhere;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px 0 9px;
+      color: var(--navy);
+      font-size: 11.3pt;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      page-break-after: avoid;
+    }
+
+    h2::before {
+      content: "";
+      width: 5px;
+      height: 19px;
+      border-radius: 4px;
+      background: var(--accent);
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--line), transparent);
+    }
+
+    p {
+      margin: 0 0 9px;
+    }
+
+    ul {
+      margin: 4px 0 11px;
+      padding-left: 19px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      padding-left: 2px;
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+
+    strong {
+      color: var(--navy);
+    }
+
+    .job-title {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: baseline;
+      margin-top: 14px;
+      padding-top: 11px;
+      border-top: 1px solid var(--line);
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: .2px;
+      page-break-after: avoid;
+    }
+
+    .job-title:first-of-type {
+      margin-top: 7px;
+    }
+
+    .job-title span:last-child {
+      color: var(--muted);
+      font-size: 9pt;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      margin: 2px 0 6px;
+      color: var(--blue);
+      font-weight: 650;
+    }
+
+    .account-title {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      margin: 7px 0 4px 8px;
+      color: #34445a;
+      font-weight: 750;
+      page-break-after: avoid;
+    }
+
+    .account-title span:last-child {
+      color: var(--muted);
+      font-size: 9pt;
+      white-space: nowrap;
+    }
+
+    .account-list {
+      margin-left: 8px;
+      padding-left: 19px;
+    }
+
+    .project-item {
+      margin-bottom: 7px;
+    }
+
+    .project-name {
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .resume-footer {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 8.5pt;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .toolbar {
+        flex-wrap: wrap;
+      }
+
+      .toolbar button {
+        flex: 1 1 145px;
+      }
+
+      .resume {
+        width: calc(100% - 18px);
+        margin-top: 10px;
+        padding: 24px 20px;
+      }
+
+      .resume-header {
+        margin: -24px -20px 26px;
+        padding: 28px 20px 24px;
+      }
+
+      .identity {
+        align-items: flex-start;
+      }
+
+      .monogram {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        font-size: 17px;
+      }
+
+      h1 {
+        font-size: 22pt;
+      }
+
+      .job-title,
+      .account-title {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .job-title span:last-child,
+      .account-title span:last-child {
+        white-space: normal;
+      }
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        font-size: 9.4pt;
+        line-height: 1.36;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .resume {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border-top: 0;
+        box-shadow: none;
+      }
+
+      .resume-header {
+        margin: -12mm -12mm 6mm;
+        padding: 12mm 12mm 8mm;
+      }
+
+      h1 {
+        font-size: 24pt;
+      }
+
+      h2 {
+        margin-top: 13px;
+      }
+
+      .job-title {
+        margin-top: 9px;
+        padding-top: 7px;
+      }
+
+      ul {
+        margin-bottom: 7px;
+      }
+
+      li {
+        margin-bottom: 2px;
+      }
+
+      .job-title,
+      .job-company,
+      .account-title,
+      h2 {
+        break-after: avoid;
+      }
+
+      ul, p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="toolbar" aria-label="Resume export controls">
+    <button class="primary" type="button" onclick="downloadPDF()" title="Open the browser print dialog and save as PDF">
+      <span aria-hidden="true">↧</span> Download PDF
+    </button>
+    <button type="button" onclick="downloadWord()" title="Download an editable Microsoft Word document">
+      <span aria-hidden="true">W</span> Download Word
+    </button>
+    <button type="button" onclick="window.print()" title="Print resume">
+      <span aria-hidden="true">⎙</span> Print
+    </button>
+  </nav>
+
+  <main id="resume" class="resume">
+    <header class="resume-header">
+      <div class="identity">
+        <div class="monogram" aria-hidden="true">CE</div>
+        <div>
+          <h1>CLENT EBANKS</h1>
+          <p class="headline">Bilingual Medical Interpreter · IT Support · Web Developer</p>
+        </div>
+      </div>
+      <div class="subtitle">
+    Siguatepeque, Comayagua, Honduras &nbsp;|&nbsp; +504 9852-0210 &nbsp;|&nbsp; clentebanks0@gmail.com
+  </div>
+    </header>
+
+  <h2>Professional Summary</h2>
+  <p>
+    High-performing, bilingual (English-Spanish) professional with a multifaceted background spanning remote medical interpretation, IT technical support, front-end web development, and disciplined military leadership. Experienced in facilitating flawless communication in high-pressure healthcare environments while ensuring strict compliance with confidentiality protocols and corporate standards. A highly analytical problem solver with a proven ability to design, develop, and deploy digital systems, educational platforms, and technical optimization tools. Recognized for exceptional organizational skills, operational planning capabilities, and a structured approach to managing personnel, logistics, and digital products in transition toward tech-driven roles.
+  </p>
+
+  <h2>Core Competencies</h2>
+  <ul>
+    <li><strong>Interpretation & Communication:</strong> English-Spanish Medical Interpretation (Consecutive & Remote OPI), Medical Terminology & Healthcare Protocols, Limited English Proficiency (LEP) Communication Support, Professional Neutrality, Accuracy, and Quality Assurance, Cultural Sensitivity & Active Listening, Crisis Communication & High-Pressure Problem Solving.</li>
+    <li><strong>IT Support & Infrastructure:</strong> Technical Support (Tier 1 & 2 Support) & Troubleshooting, Windows 10/11 Administration & Performance Optimization, Hardware Diagnostics & Technical Auditing, Command Line Operations (CMD & PowerShell Scripting Basics), Cybersecurity Fundamentals & Data Privacy Compliance.</li>
+    <li><strong>Web Development & Digital Ecosystems:</strong> Front-End Web Development (HTML, CSS, JavaScript), Web Architectures (ASP.NET MVC, Static Sites), CMS & E-Commerce Administration (WordPress, Shopify), Site Deployment & Control Systems (Netlify, GitHub), Technical SEO, Structured Data & Search Engine Indexing, Landing Page Design & High-Conversion Funnel Building.</li>
+    <li><strong>Digital Content & Strategy:</strong> Technical Writing & Video Scripting (High-Retention Formats), Strategic Content Planning & Audience Retention (YouTube Shorts), Lead Generation & Lead Magnet Creation, Email Marketing Campaigns & Automated Workflows.</li>
+    <li><strong>Leadership & Operations:</strong> Tactical Team Leadership & Personnel Management, Operational Planning & Resource Distribution, Training Program Design & Instructional Delivery, Inventory Control, Logistics & Procedural Compliance.</li>
+  </ul>
+
+  <h2>Work Experience</h2>
+
+  <div class="job-title">
+    <span>BILINGUAL OVER-THE-PHONE INTERPRETER (OPI)</span>
+    <span>10/2022 – Present</span>
+  </div>
+  <div class="job-company">Interactive Solutions / Interactive Contact Center</div>
+  
+  <div class="account-title">
+    <span>• cq fluency Account</span>
+    <span>Oct. 21, 2025 – Present</span>
+  </div>
+  <ul class="account-list">
+    <li>Deliver highly accurate, remote consecutive medical interpretation between Spanish-speaking patients and healthcare providers in fast-paced clinical settings.</li>
+    <li>Translate complex medical diagnoses, treatment instructions, and terminology with complete fidelity and zero deviation from the original message.</li>
+    <li>Comply strictly with patient confidentiality regulations, data privacy protocols, and professional interpreter ethics on every interaction.</li>
+    <li>Bridge linguistic and cultural barriers to optimize the patient-provider experience and ensure complete clarity during specialized care consultations.</li>
+    <li>Adhere consistently to quality assurance standards, key performance indicators, and internal evaluation criteria.</li>
+  </ul>
+
+  <div class="account-title">
+    <span>• CyraCom Account</span>
+    <span>Oct. 17, 2022 – Oct. 21, 2025</span>
+  </div>
+  <ul class="account-list">
+    <li>Provided over-the-phone consecutive interpretation for complex medical, financial, and customer service scenarios.</li>
+    <li>Managed effective communications for Limited English Proficiency (LEP) individuals during highly sensitive and emotionally charged conversations.</li>
+    <li>Maintained professional neutrality, strict focus, and poise in high-pressure, emergency-driven situations.</li>
+    <li>Handled large call volumes while meeting stringent corporate quality metrics and operational response-time standards.</li>
+    <li>Participated in continuous calibration and quality reviews to maintain compliance with industry standards.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>FOUNDER, WEB DEVELOPER & TECHNOLOGY CONTENT CREATOR</span>
+    <span>01/2026 – Present</span>
+  </div>
+  <div class="job-company">WinHacks - Windows Tips and Optimization</div>
+  <ul>
+    <li>Designed and built the entire WinHacks digital ecosystem from scratch, including the web portal, custom lead generation forms, and landing pages.</li>
+    <li>Conduct technical research and author specialized content regarding Windows OS troubleshooting, optimization techniques, and command-line execution (CMD/PowerShell).</li>
+    <li>Write high-retention video scripts and produce short-form educational video content (YouTube Shorts) focused on tech tutorials and system maintenance.</li>
+    <li>Implement technical SEO, GEO audits, schema validation, and structured internal linking to boost search engine visibility and user navigation.</li>
+    <li>Strategize the expansion of downloadable resources, digital toolkits, and structured training modules for IT support enthusiasts.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>IT ASSISTANT</span>
+    <span>07/2018 – 04/2022</span>
+  </div>
+  <div class="job-company">Confidential IT & E-Commerce Company</div>
+  <ul>
+    <li>Designed responsive web layouts and managed regular updates for corporate websites utilizing HTML and CSS.</li>
+    <li>Developed, configured, and administered a digital storefront on Shopify, improving operational flow and UI/UX.</li>
+    <li>Supported massive email marketing campaigns and managed daily digital IT operations.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>INDEPENDENT RETAIL STORE OWNER</span>
+    <span>06/2017 – 07/2018</span>
+  </div>
+  <div class="job-company">Confidential Retail Business</div>
+  <ul>
+    <li>Controlled daily store operations, customer relationship management, bookkeeping, and inventory replenishment for office and printing services.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>INFANTRY SECOND LIEUTENANT</span>
+    <span>01/2006 – 02/2016</span>
+  </div>
+  <div class="job-company">Honduran Army</div>
+  <ul>
+    <li>Served as Rifle Company and Rifle Platoon Commander, supervising personnel, coordinating field actions, and enforcing tactical procedures.</li>
+    <li>Planned, coordinated, and executed comprehensive physical and technical training programs at an advanced military instruction center.</li>
+    <li>Supervised security operations and managed military resource logistics, consistently maintaining high standards of accountability and protocol adherence.</li>
+    <li>Led critical decision-making processes under high-stress conditions, ensuring personnel safety and operational objectives were achieved.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>INVENTORY & DISPATCH SUPERVISOR</span>
+    <span>06/2001 – 12/2001</span>
+  </div>
+  <div class="job-company">LACTHOSA Siguatepeque</div>
+  <ul>
+    <li>Directed cold storage logistics, inventory tracking, and distribution dispatch scheduling for transport trucks.</li>
+  </ul>
+
+  <div class="job-title">
+    <span>CASHIER & CUSTOMER SERVICE ASSISTANT</span>
+    <span>01/2001 – 06/2001</span>
+  </div>
+  <div class="job-company">Tornillos y Accesorios Valenzuela</div>
+  <ul>
+    <li>Executed cash operations, provided front-desk customer assistance, and supported inventory audits.</li>
+  </ul>
+
+  <h2>Featured Projects</h2>
+  <ul>
+    <li class="project-item"><span class="project-name">WinHacks:</span> An educational portal focused on technical support, basic cybersecurity, OS optimization, and command-line automation.</li>
+    <li class="project-item"><span class="project-name">Ebanks Interpreter Studio (https://ebanksinterpreterstudio.netlify.app/):</span> A responsive web app developed with HTML/CSS/JS for bilingual medical interpreters. Features quick-access medical glossaries and abbreviation tools.</li>
+    <li class="project-item"><span class="project-name">WinHacks Academy:</span> Educational initiative to deploy online courses covering Windows systems administration and security.</li>
+    <li class="project-item"><span class="project-name">WinHacks Toolkit:</span> Utility suite containing Sitemap Builders, RSS engines, and performance metrics.</li>
+    <li class="project-item"><span class="project-name">Web Collaborations:</span> Technical contributions and UI maintenance for Next Mile (https://di-nextmile.com), Data Intelligence Group (https://www.dataintelligence-group.com/), Data Intelligence Shop, and the government portal SNICC (http://snicc.marn.gob.gt/).</li>
+  </ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Coursework in Computer Engineering</strong> - Technological University of Honduras (09/2020 – 12/2021)</li>
+    <li><strong>Bachelor's Degree in Military Administration</strong> - National Autonomous University of Honduras (02/2002 – 11/2005)</li>
+    <li><strong>Infantry Second Lieutenant Commission</strong> - General Francisco Morazan Military Academy (01/2002 – 12/2005)</li>
+    <li><strong>High School Diploma in Business Administration</strong> - Instituto Privado San Francisco (1998 – 2000)</li>
+    <li><strong>High School Diploma in Sciences and Letters</strong> - Instituto Privado Adventista (1995 – 1997)</li>
+  </ul>
+
+  <h2>Certifications & Training</h2>
+  <ul>
+    <li>Google IT Support Professional Certificate</li>
+    <li>Leadership and Personnel Management Program (Military & Corporate)</li>
+    <li>Web Development Specialization (HTML, CSS, JavaScript, Bootstrap)</li>
+    <li>WordPress & Shopify E-Commerce Administration Program</li>
+    <li>Advanced Training in Microsoft Office and Windows Server Environments</li>
+    <li>Merchant Marine Technical Courses</li>
+  </ul>
+
+  <h2>Languages</h2>
+  <ul>
+    <li><strong>Spanish:</strong> Native</li>
+    <li><strong>English:</strong> Advanced Professional Proficiency (Bilingual)</li>
+  </ul>
+
+    <footer class="resume-footer">
+      Clent Ebanks · Executive Resume
+    </footer>
+  </main>
+
+  <script>
+    function downloadPDF() {
+      const originalTitle = document.title;
+      document.title = "Clent-Ebanks-Executive-Resume";
+      window.print();
+      window.setTimeout(() => {
+        document.title = originalTitle;
+      }, 1000);
+    }
+
+    function downloadWord() {
+      const resume = document.getElementById("resume");
+      if (!resume) {
+        alert("The resume content could not be found.");
+        return;
+      }
+
+      const wordStyles = `
+        <style>
+          @page { size: A4; margin: 1.4cm; }
+          body {
+            font-family: Aptos, Calibri, Arial, sans-serif;
+            color: #172033;
+            font-size: 10.5pt;
+            line-height: 1.4;
+          }
+          .resume-header {
+            padding: 22px;
+            color: #ffffff;
+            background: #0b2447;
+          }
+          .identity { display: table; width: 100%; }
+          .monogram {
+            display: inline-block;
+            margin-right: 14px;
+            padding: 14px;
+            border: 2px solid #ffffff;
+            font-weight: bold;
+          }
+          h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 25pt;
+            letter-spacing: 1px;
+          }
+          .headline, .subtitle { color: #ffffff; }
+          h2 {
+            margin-top: 18px;
+            padding-bottom: 4px;
+            color: #0b2447;
+            border-bottom: 1px solid #dbe2ea;
+            font-size: 12pt;
+            text-transform: uppercase;
+          }
+          .job-title, .account-title {
+            margin-top: 12px;
+            color: #0b2447;
+            font-weight: bold;
+          }
+          .job-title span:last-child,
+          .account-title span:last-child {
+            float: right;
+            color: #5d6879;
+          }
+          .job-company { color: #174b8a; font-weight: bold; }
+          li { margin-bottom: 4px; }
+          .resume-footer {
+            margin-top: 18px;
+            padding-top: 8px;
+            border-top: 1px solid #dbe2ea;
+            color: #5d6879;
+            text-align: center;
+          }
+        </style>
+      `;
+
+      const wordDocument = `
+        <!DOCTYPE html>
+        <html xmlns:o="urn:schemas-microsoft-com:office:office"
+              xmlns:w="urn:schemas-microsoft-com:office:word"
+              xmlns="http://www.w3.org/TR/REC-html40">
+        <head>
+          <meta charset="utf-8">
+          <title>Clent Ebanks Executive Resume</title>
+          ${wordStyles}
+        </head>
+        <body>${resume.outerHTML}</body>
+        </html>
+      `;
+
+      const blob = new Blob(["\ufeff", wordDocument], {
+        type: "application/msword"
+      });
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Clent-Ebanks-Executive-Resume.doc";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
